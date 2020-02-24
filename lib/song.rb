@@ -45,8 +45,9 @@ self.all.sort{|a, b| a.name <=> b.name}
 end
 
 def self.new_from_filename(file)
-data = file.split(" - ")
-song = Song.new_by_name(data[1].delete ".mp3")
+  reg = /(.mp3)/
+data = file.gsub(reg, "").split(" - ")
+song = Song.new_by_name(data[1])
 song.artist_name = data[0]
 end
 
