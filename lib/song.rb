@@ -49,6 +49,7 @@ def self.new_from_filename(file)
 data = file.gsub(reg, "").split(" - ")
 song = Song.new_by_name(data[1])
 song.artist_name = data[0]
+song
 end
 
 def self.create_from_filename(file)
