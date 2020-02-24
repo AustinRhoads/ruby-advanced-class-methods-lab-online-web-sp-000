@@ -41,7 +41,7 @@ end
 end
 
 def self.alphabetical
-self.all.sort_by(self.all.name)
+self.all.sort{|a, b| a.name <=> b.name}
 end
 
 def new_from_filename
