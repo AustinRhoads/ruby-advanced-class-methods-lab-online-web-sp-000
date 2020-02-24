@@ -44,11 +44,11 @@ def self.alphabetical
 self.all.sort{|a, b| a.name <=> b.name}
 end
 
-def self.new_from_filename
+def self.new_from_filename(file)
 
 end
 
-def self.create_from_filename
+def self.create_from_filename(file)
 
 end
 
