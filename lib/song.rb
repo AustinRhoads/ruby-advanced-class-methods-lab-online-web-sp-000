@@ -41,7 +41,7 @@ end
 end
 
 def self.alphabetical
-self.all.name.sort
+self.all.sort_by(self.all.name)
 end
 
 def new_from_filename
