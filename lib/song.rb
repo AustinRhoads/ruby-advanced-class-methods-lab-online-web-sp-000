@@ -32,12 +32,13 @@ def self.find_by_name(name)
 self.all.find {|s| s.name == name}
 end
 
-def find_or_creat_by_name
+def self.find_or_creat_by_name(name)
+
 
 end
 
 def self.alphabetical
-all.name.sort
+self.all.name.sort
 end
 
 def new_from_filename
