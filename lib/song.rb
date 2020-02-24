@@ -32,7 +32,7 @@ def self.find_by_name(name)
 self.all.find {|s| s.name == name}
 end
 
-def self.find_or_creat_by_name(name)
+def self.find_or_create_by_name(name)
 if Song.find_by_name(name) == false
   Song.create_by_name(name)
 end
