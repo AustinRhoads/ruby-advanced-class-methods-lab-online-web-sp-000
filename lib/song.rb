@@ -53,7 +53,11 @@ song
 end
 
 def self.create_from_filename(file)
-
+  reg = /(.mp3)/
+data = file.gsub(reg, "").split(" - ")
+song = Song.create_by_name(data[1])
+song.artist_name = data[0]
+song
 end
 
 def self.destroy_all
